@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIET Fee Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-box">
+      <div class="KIET_logo">
+        <img src="images\KIET-Logo.jpg" height="150">
+      </div>
+        <h1>KIET Deemed to be University</h1>
+        <hr>
+        <br>
+        <h2>Fee Submission Form</h2>
+
+        <form id="feeForm">
+            <div class="section">
+                <h3>Student Information</h3>
+                
+                <div class="field">
+                    <label>Enrollment Number:</label>
+                    <input type="text" id="enrollment" required>
+                </div>
+
+                <div class="field">
+                    <label>Full Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="field">
+                    <label>Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="field">
+                    <label>Phone (10 digits):</label>
+                    <input type="tel" id="phone" placeholder="10-digit number" required>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Academic Information</h3>
+                
+                <div class="field">
+                    <label>Program:</label>
+                    <select id="program" required>
+                        <option value="">Select Program</option>
+                        <option value="btech">B.Tech</option>
+                        <option value="mtech">M.Tech</option>
+                        <option value="bca">BCA</option>
+                        <option value="mba">MBA</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Semester:</label>
+                    <select id="semester" required>
+                        <option value="">Select Semester</option>
+                        <option value="1">1st</option>
+                        <option value="2">2nd</option>
+                        <option value="3">3rd</option>
+                        <option value="4">4th</option>
+                        <option value="5">5th</option>
+                        <option value="6">6th</option>
+                        <option value="7">7th</option>
+                        <option value="8">8th</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Fee Information</h3>
+                
+                <div class="field">
+                    <label>Tuition Fee (₹):</label>
+                    <input type="number" id="tuition" step="100" min="0" required>
+                </div>
+
+                <div class="field">
+                    <label>Hostel Fee (₹):</label>
+                    <input type="number" id="hostel" step="100" min="0">
+                </div>
+
+                <div class="field">
+                    <label>Total Fee (₹):</label>
+                    <input type="number" id="total" readonly>
+                </div>
+            </div>
+
+
+            <div class="section">
+                <h3>Payment Details</h3>
+                
+                <div class="field">
+                    <label>Payment Mode:</label>
+                    <select id="paymentMode" required>
+                        <option value="">Select Mode</option>
+                        <option value="online">Online</option>
+                        <option value="cheque">Cheque</option>
+                        <option value="cash">Cash</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label>Transaction ID:</label>
+                    <input type="text" id="transactionId" required>
+                </div>
+
+                <div class="field">
+                    <label>Payment Date:</label>
+                    <input type="date" id="paymentDate" required>
+                </div>
+            </div>
+
+
+            <div class="section">
+                <div class="field checkbox-field">
+                    <input type="checkbox" id="declaration" required>
+                    <label for="declaration">I declare that all information is true and accurate</label>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="field">
+                    <label>Submission Date:</label>
+                    <input type="date" id="submissionDate" required>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Clear</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
